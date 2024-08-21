@@ -856,6 +856,11 @@ body {
     transition: transform 600ms cubic-bezier(0.42, 0, 0.12, 0.93);
 }
 
+.projects-item:hover .projects-overlay {
+    top: 305px;
+        transform: translateY(-305px);
+}
+
 .projects-item {
     border: 1px solid var(--border-color);
     flex-basis: calc((100% - 40px) / 3);
@@ -881,12 +886,17 @@ body {
     padding-right: 24px;
 }
 
+.name-holder {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .projects-caption {
     color: var(--third-text-color);
     font-size: 16px;
     line-height: calc(30 / 16);
     padding-left: 24px;
-    padding-right: 24px;
+    padding-right: 48px;
 }
 
 
@@ -1041,6 +1051,11 @@ body {
         min-height: 120px;
         outline: none;
         cursor: pointer;
+        resize: none;
+}
+
+.comment:focus::placeholder {
+    color: var(--logo-color);
 }
 
 .comment:focus {
